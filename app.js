@@ -30,9 +30,7 @@ if (id_token) {
         document.getElementById('logged-in-box').style.display = 'inline';
         document.getElementById('nick').textContent = profile.nickname;
         document.getElementById('decoded-jwt').textContent =
-            JSON.stringify(
-                jwt_decode(id_token)
-            );
+            JSON.stringify(jwt_decode(id_token),null,'\t');
     });
 }
 
