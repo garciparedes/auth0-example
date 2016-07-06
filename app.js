@@ -5,7 +5,7 @@ var lock = new Auth0Lock(
 );
 
 document.getElementById('btn-login').addEventListener('click', function () {
-    lock.show({authParams: {scope: 'openid'}});
+    lock.show({authParams: {scope: 'openid openid name email picture'}});
 });
 
 var hash = lock.parseHash(window.location.hash);
