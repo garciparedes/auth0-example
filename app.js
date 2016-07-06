@@ -29,7 +29,10 @@ if (id_token) {
         document.getElementById('login-box').style.display = 'none';
         document.getElementById('logged-in-box').style.display = 'inline';
         document.getElementById('nick').textContent = profile.nickname;
-        document.getElementById('decoded-jwt').textContent = jwt_decode(id_token);
+        document.getElementById('decoded-jwt').textContent =
+            JSON.stringify(
+                jwt_decode(id_token)
+            );
     });
 }
 
